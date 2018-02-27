@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "The hbd Extension",
+  "description": "This is an extension to generate Facebook birthday posts",
+  "version": "1.0",
+
+  "page_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  
+  "permissions": [
+    "https://facebook.com/*",
+    "declarativeContent"
+  ],
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
+}
