@@ -1,3 +1,4 @@
 **/.vscode/*
 
 **/cube/
+**/__pycache__/*
