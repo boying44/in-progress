@@ -11,6 +11,7 @@ class Server:
 
     # Argument taking decorators should return a function
     def route(self, path, method="GET"):
+        # Handle if I pass a route in as the func
         def decorator(func): # How do I call this?
             self.routes[path] = Endpoint(func)
         return decorator
