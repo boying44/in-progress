@@ -1,5 +1,8 @@
 - [ ] Detect health
-- [ ] Eat Salmon
+    - [X] Detech health bar
+    - [ ] Recognize health digit
+- [X] Eat Salmon
+    - [ ] Check if transparant background affects finding Salmon
 - [x] Detect monster
     - [ ] Choose untaken giant
 - [ ] Pick up item

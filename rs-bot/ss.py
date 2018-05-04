@@ -6,6 +6,7 @@ import time
 
 time.sleep(5)
 image = pyautogui.screenshot()
+# PIL to cv2 image
 image = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
 
 giants.find_giant(image)
