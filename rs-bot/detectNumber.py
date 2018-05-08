@@ -1,14 +1,13 @@
 from PIL import Image
-import pytesseract
-import argparse
 import cv2
-import os
+import sys
 
-# image = cv2.imread('health.png')
-# gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+if (len(sys.argv) > 1):
+    filename = sys.argv[1]
+else:
+    print("Missing filename")
+    exit(0)
 
-filename = "grayHealth.png"
-# cv2.imwrite(filename, gray)
 img = Image.open(filename)
-text = pytesseract.image_to_string(img)
+text = pytesseract.image_to_string(img, config='--psm 10 --eom 3 -c tessedit_char_whitelist=0123456789')
 print(text)

@@ -1,0 +1,1 @@
+# #b18453 skin color of giants
