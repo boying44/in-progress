@@ -1,7 +1,8 @@
 - [ ] Detect health
 - [ ] Eat Salmon
-- [ ] Detect monster
+- [x] Detect monster
+    - [ ] Choose untaken giant
 - [ ] Pick up item
-
+- [ ] Screenshot choose window
 
 Run with Python3
