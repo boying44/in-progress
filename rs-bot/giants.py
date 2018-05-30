@@ -25,27 +25,26 @@ def find_giant(image):
     masked = cv2.bitwise_and(image, image, mask=mask)
 
     # show side by side
-    combined = np.hstack([image, masked])
-    height, width, channels = combined.shape
-    fitScreen = cv2.resize(combined, (int(width/2), int(height/2)))
+    # combined = np.hstack([image, masked])
+    # height, width, channels = combined.shape
+    # fitScreen = cv2.resize(combined, (int(width/2), int(height/2)))
 
-    cv2.imshow("image", fitScreen)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
+    # cv2.imshow("image", fitScreen)
+    # cv2.waitKey(0)
+    # cv2.destroyAllWindows()
 
-    ##### test making it into one contour
-    kernel = np.ones((5,5),np.uint8)
-    erosion = cv2.dilate(mask, kernel, iterations = 2)
-    dilation = cv2.dilate(erosion, kernel, iterations = 3)
-    closing = cv2.morphologyEx(dilation, cv2.MORPH_CLOSE, kernel)
+    # ##### test making it into one contour
+    # kernel = np.ones((5,5),np.uint8)
+    # erosion = cv2.dilate(mask, kernel, iterations = 2)
+    # dilation = cv2.dilate(erosion, kernel, iterations = 3)
+    # closing = cv2.morphologyEx(dilation, cv2.MORPH_CLOSE, kernel)
 
-    ret, thresh = cv2.threshold(closing,127,255,0)
-    im2, contours, hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
-    cv2.drawContours(closing, contours, -1, (0,255,0), 3)
-    cv2.imshow("closing", closing)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
-
+    # ret, thresh = cv2.threshold(closing,127,255,0)
+    # im2, contours, hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
+    # cv2.drawContours(closing, contours, -1, (0,255,0), 3)
+    # cv2.imshow("closing", closing)
+    # cv2.waitKey(0)
+    # cv2.destroyAllWindows()
     #####
 
     ret, thresh = cv2.threshold(mask,127,255,0)

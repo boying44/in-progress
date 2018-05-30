@@ -9,3 +9,16 @@
 - [ ] Screenshot choose window
 
 Run with Python3
+
+
+Thought process:
+Giant detection
+    - Object detection?
+        Problem: would have to train machine learning model to identify the giant
+    - Solution:
+        - Use a color mask to filter giant's location
+        - Find the contours in the mask - a giant end up as several big and small contours
+        - Use center of big contours to get an approximate giant location
+Health detection
+    - OCR on health status doesn't work
+    - Percentage based health bar seems too hard
