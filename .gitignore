@@ -2,3 +2,5 @@
 
 **/cube/
 **/__pycache__/*
+
+*.exe

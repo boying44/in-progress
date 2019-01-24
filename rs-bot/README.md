@@ -1,7 +1,7 @@
 - [ ] Detect health
     - [X] Detech health bar
     - [ ] Recognize health digit
-- [X] Eat Salmon
+- [X] Eat Food
     - [ ] Check if transparant background affects finding Salmon
 - [x] Detect monster
     - [ ] Choose untaken giant
@@ -22,3 +22,5 @@ Giant detection
 Health detection
     - OCR on health status doesn't work
     - Percentage based health bar seems too hard
+        - How to get health bar vs other people's
+        - Center health bar might work
